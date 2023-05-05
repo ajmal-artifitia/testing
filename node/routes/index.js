@@ -13,6 +13,12 @@ const {
 
 const router = require("express").Router();
 const multer = require("multer");
+const {
+  sendOtp,
+  verifyOtp,
+  requestOtp,
+  otpVerification,
+} = require("../controller/otp.js");
 
 //store image in memory
 const storage = multer.memoryStorage();
@@ -36,5 +42,13 @@ router.post("/qrGenerate", qrGenerate);
 router.get("/fetchPrinter", fetchPrinter);
 
 router.get("/thermalPrinter", thermalPrinter);
+
+router.get("/sendOtp", sendOtp);
+
+router.post("/verifyOtp", verifyOtp);
+
+router.post("/requestOtp", requestOtp);
+
+router.post("/otpVerification", otpVerification);
 
 module.exports = router;
