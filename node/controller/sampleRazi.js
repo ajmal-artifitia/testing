@@ -1,4 +1,4 @@
-let ip = "192.168.29.250";
+let ip = "192.168.29.200";
 
 async function print() {
   const ThermalPrinter = require("node-thermal-printer").printer;
